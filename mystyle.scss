@@ -1,0 +1,64 @@
+// Include any default variable overrides here (though functions won't be available)
+$primary: #2c5e1a;
+
+@import "node_modules/bootstrap/scss/bootstrap";
+// Then add additional custom code here
+//Uprava navbaru
+.podklad {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("images/main.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+.navbar {
+  background-color: rgba($primary, 0.8);
+  .nav-link:hover,
+  .nav-link:focus {
+    transition: border 0.2s;
+    border-bottom: 1px solid #ffffff;
+    margin-bottom: -1px;
+  }
+}
+// Uprava sekce kontakt
+
+#kontakt {
+  .contact-info {
+    li {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+
+      i {
+        width: 25px;
+        color: $primary;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .embed-responsive {
+    border: 2px solid $primary;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  form {
+    background-color: rgba($primary, 0.05);
+    padding: 20px;
+    border-radius: 5px;
+
+    .btn-primary {
+      background-color: $primary;
+      border-color: $primary;
+      &:hover {
+        background-color: darken($primary, 10%);
+        border-color: darken($primary, 10%);
+      }
+    }
+  }
+}
+//Uprava sekce Footer
+.footer {
+  background-color: rgba($primary, 0.8);
+}
